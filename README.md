@@ -38,3 +38,4 @@ The rendering process will:
 
 # Notes
 - All configuration should be done in the YAML header of `template.qmd` unless you know what you are editing.
+- The abstract and acknowledgments are written separately in `abstract.tex` and `acknowledgments.tex`. Edit those files to change these sections.
