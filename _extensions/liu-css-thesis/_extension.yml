@@ -1,0 +1,21 @@
+title: Liu-css-thesis
+author: Yukun Jiao
+version: 1.0.0
+quarto-required: ">=1.7.0"
+contributes:
+  formats:
+    pdf:
+      documentclass: liuthesis
+      pdf-engine: xelatex
+      mathspec: true
+      format-resources:
+      - liuthesis.cls
+      - hyperpdfx.sty
+      - sammanfattning.tex
+      - abstract.tex
+      - acknowledgments.tex
+      - figures
+      include-in-header:
+      - include-settings.tex
+      filters:
+      - write-settings.lua
