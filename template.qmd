@@ -1,27 +1,19 @@
 ---
 msc-thesis:
   author-name: "Yukun Jiao"
-  publication-year: "2026"
-  thesis-number: "001"
-  department: "Institutionen för ekonomisk och industriell utveckling"
+  publication-year: "Spring 2026"
+  thesis-number: "00001"
   department-english: "Department of Management and Engineering"
   department-short: "IEI"
-  area: "FILFAK"
-  thesis-subject: "Computational Social Science"
-  thesis-subject-english: "Computational Social Science"
-  keywords: "computational social science, symbolic boundaries, online communities"
-  keywords-swedish: ""
+  area: "FIL"
+  thesis-subject: "Master's programme"
   title-english: "Your Thesis Title"
-  title-swedish: ""
-  subtitle-english: "subtitle"
-  subtitle-swedish: ""
+  subtitle-english: "Subtitle"
   supervisor: "Miriam Hurtado Bodell"
   examiner: "Examiner Name"
 
-format:
-  liu-css-thesis-pdf: default
-top-level-division: chapter
-number-sections: true
+format: liu-css-thesis-pdf
+bibliography: references.bib
 ---
 # Introduction
 
@@ -55,7 +47,7 @@ is to use \emph{Google Scholar} (which also has the useful function
 \emph{Cite}). By iterating between searching for articles and reading
 abstracts to find new terms to guide further searches, it is
 fairly straight forward to locate good and relevant
-information, such as \cite{test}.
+information, such as [@scigen].
 
 Having found a relevant article one can use the function for
 viewing other articles that have cited this particular article,
@@ -74,12 +66,20 @@ in general.
 This chapter is called either \emph{Theory, Related Work}, or
 \emph{Related Research}. Check with your supervisor.
 
+## The State of the Field
+
+## Research Gap
+
+## Case Study
+
 # Data and Methods
+
+## Data
+
+## Methods
 
 # Results
 
 # Discussion
 
 # Conclusion
-
-\printbibliography

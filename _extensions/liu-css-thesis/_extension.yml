@@ -8,6 +8,9 @@ contributes:
       documentclass: liuthesis
       pdf-engine: xelatex
       mathspec: true
+      csl: asa.csl
+      reference-section-title: References
+      top-level-division: chapter
       format-resources:
       - liuthesis.cls
       - hyperpdfx.sty
@@ -15,6 +18,7 @@ contributes:
       - abstract.tex
       - acknowledgments.tex
       - figures
+      - asa.csl
       include-in-header:
       - include-settings.tex
       filters:

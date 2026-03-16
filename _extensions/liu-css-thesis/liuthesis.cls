@@ -401,6 +401,10 @@
   \RequirePackage[english]{babel}
 }
 \fi
+
+\addto\captionsenglish{\renewcommand{\contentsname}{Table of Contents}}
+\addto\captionsenglish{\renewcommand{\bibname}{References}}
+\addto\captionsenglish{\renewcommand{\refname}{References}}
 %% Include articles
 \RequirePackage{calc}
 \RequirePackage{ragged2e}
@@ -700,7 +704,7 @@
 \fi
 
 \ifstudent
-\newcommand{\isrn}{LIU-\@departmentshort{}/\@area{}-EX-\@level{}-{}-\StrRight{\@publicationyear}{2}/\@currentyearthesisnumber-{}-SE}
+\newcommand{\isrn}{LIU-\@departmentshort{}-\@area{}-\@level{}-{}-\StrRight{\@publicationyear}{2}/\@currentyearthesisnumber-{}-SE}
 \fi
 
 \newcommand\makeundergraduatetitle{%
@@ -716,7 +720,7 @@
       }{%
       \begin{large}%
         Linköping University | \@departmentenglish\par
-        \@thesistypenameenglish{} thesis, \@thesiscredits{} ECTS | \@thesissubject\par%
+        \@thesistypenameenglish{} thesis, \@thesiscredits{} credits | \@thesissubject\par%
         \@publicationyear\ | \isrn\par%
       \end{large}%
       }%
@@ -735,7 +739,7 @@
       }%
 \begin{minipage}[t]{\thesiswidth}
       {\fontsize{25pt}{30pt}\selectfont\swedishenglish{\@titleswedish}{\@titleenglish}\par}%
-      -- {\fontsize{13pt}{15pt}\selectfont\swedishenglish{\@subtitleswedish}{\@subtitleenglish}\par}%
+      \textemdash{} {\fontsize{13pt}{15pt}\selectfont\swedishenglish{\@subtitleswedish}{\@subtitleenglish}\par}%
       \vspace*{10mm}%
       {\@georgia\fontsize{12pt}{13pt}\selectfont\textbf{\@author}\par
       }%
@@ -753,9 +757,9 @@
   \hspace*{32mm}
   \parbox{0.5\textwidth}{\raggedleft%
     \vspace*{4mm}
-    Linköpings universitet\\
-    SE--581 83 Linköping\\
-    \swedishenglish{013-28 10 00}{+46 13 28 10 00}, \href{http://www.liu.se}{www.liu.se}}
+    Linköping University\\
+    SE-581 83 Linköping, Sweden\\
+    \swedishenglish{013-28 10 00}{+46 013 28 10 00}, \href{http://www.liu.se}{www.liu.se}}
 \end{textblock*}
     }
   }
@@ -1023,6 +1027,7 @@ refer to its www home page:
 % Variables and page layout
 \linespread{1.05}
 
+
 \typeout{******** LiU thesis layout ********}
 \typeoutlayout
 \typeout{******** Standard memoir layout ********}
@@ -1077,7 +1082,7 @@ refer to its www home page:
   {\addcontentsline{toc}{chapter}{Acknowledgments}}
   \liuthesisacknowledgments
   \cleardoublepage
-  {\pagestyle{plain}\tableofcontents\relax\cleardoublepage}
+  {\pagestyle{plain}\tableofcontents*\relax\cleardoublepage}
   \iftotalfigures {\pagestyle{plain}\listoffigures\relax\cleardoublepage}\fi
   \iftotaltables {\pagestyle{plain}\listoftables\relax\cleardoublepage}\fi
   \ifdef{\listoftodos}{\ifdefempty{\listoftodos}{}{\pagestyle{plain}\listoftodos\relax\cleardoublepage}}{}
