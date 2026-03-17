@@ -1055,7 +1055,7 @@ refer to its www home page:
 \end{adjustwidth}
 
   \ifstudent
-  \makeinsidepage
+  % \makeinsidepage
   \else
   \pagestyle{plain}
   \makepermissionpage
