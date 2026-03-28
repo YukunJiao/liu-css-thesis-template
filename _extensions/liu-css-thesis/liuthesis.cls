@@ -154,6 +154,8 @@
 \gdef\liuthesisabstract{\input{abstract}}
 \gdef\liuthesissammanfattning{\input{sammanfattning.tex}}
 \gdef\liuthesisacknowledgments{\input{acknowledgments.tex}}
+\gdef\liuthesisaistatement{\input{ai_statement.tex}}
+\gdef\liuthesisethicsstatement{\input{ethics_statement.tex}}
 
 \newif\iflith
 \lithtrue
@@ -559,6 +561,7 @@
       \newcommand*{#1}{} % Avoid undefined control sequence errors
     }{}
   }
+  
   \AtBeginDocument{
     \@makefont{\@georgia}{Georgia}
     \ifexhibitpage\iflith\relax\else
@@ -1075,12 +1078,27 @@ refer to its www home page:
 \else
 \abstractpages
 \fi
-\cleardoublepage
+
+\ifshowacknowledgments
+  \cleardoublepage
   \newpage
   \phantomsection
   \swedishenglish{\addcontentsline{toc}{chapter}{Författarens tack}}
   {\addcontentsline{toc}{chapter}{Acknowledgments}}
   \liuthesisacknowledgments
+\fi
+
+
+  \cleardoublepage
+  \phantomsection
+  \addcontentsline{toc}{chapter}{Generative AI Statement}
+  \liuthesisaistatement
+
+  \cleardoublepage
+  \phantomsection
+  \addcontentsline{toc}{chapter}{Ethics Statement}
+  \liuthesisethicsstatement
+
   \cleardoublepage
   {\pagestyle{plain}\tableofcontents*\relax\cleardoublepage}
   \iftotalfigures {\pagestyle{plain}\listoffigures\relax\cleardoublepage}\fi

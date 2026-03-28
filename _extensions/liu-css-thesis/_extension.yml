@@ -17,6 +17,8 @@ contributes:
       - sammanfattning.tex
       - abstract.tex
       - acknowledgments.tex
+      - ai_statement.tex
+      - ethics_statement.tex
       - figures
       - asa.csl
       include-in-header:

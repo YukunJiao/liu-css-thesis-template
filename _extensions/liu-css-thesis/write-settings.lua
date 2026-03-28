@@ -23,6 +23,23 @@ local function cmd(name, value)
   return "\\" .. name .. "{" .. latex_escape(value) .. "}"
 end
 
+local function bool_meta(x, default)
+    if x == nil then
+      return default
+    end
+    if type(x) == "boolean" then
+      return x
+    end
+    local s = stringify(x):lower()
+    if s == "false" or s == "no" or s == "0" then
+      return false
+    end
+    if s == "true" or s == "yes" or s == "1" then
+      return true
+    end
+    return default
+  end
+
 function Meta(meta)
   local thesis = meta["msc-thesis"] or {}
 
@@ -43,6 +60,9 @@ function Meta(meta)
   local subtitle_swedish       = stringify(thesis["subtitle-swedish"])
   local supervisor             = stringify(thesis["supervisor"])
   local examiner               = stringify(thesis["examiner"])
+
+  local show_acknowledgments = thesis["show-acknowledgments"]
+  local ack = bool_meta(show_acknowledgments, true)
 
   local lines = {}
 
@@ -81,6 +101,10 @@ function Meta(meta)
   table.insert(lines, cmd("subtitleswedish", subtitle_swedish))
   table.insert(lines, cmd("supervisor", supervisor))
   table.insert(lines, cmd("examiner", examiner))
+  table.insert(lines, "")
+  
+  table.insert(lines, "\\newif\\ifshowacknowledgments")
+  table.insert(lines, ack and "\\showacknowledgmentstrue" or "\\showacknowledgmentsfalse")
   table.insert(lines, "")
 
   local out = io.open("settings.tex", "w")
