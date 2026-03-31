@@ -10,6 +10,8 @@ A Quarto extension for writing a Master's thesis in Computational Social Science
 4. Edit `ai_statement.tex` and `ethics_statement.tex` as needed.
 5. Render with `quarto render template.qmd`.
 
+> If this is your first time using the template and rendering fails, try updating TinyTeX by running `tinytex::install_tinytex()` in the R console.
+
 ## YAML Metadata Reference
 
 All metadata goes in the `msc-thesis` block of `template.qmd`:
