@@ -14,6 +14,7 @@ contributes:
       format-resources:
       - liuthesis.cls
       - hyperpdfx.sty
+      - sammanfattning.tex
       - abstract.tex
       - acknowledgments.tex
       - ai_statement.tex
@@ -24,3 +25,4 @@ contributes:
       - include-settings.tex
       filters:
       - write-settings.lua
+      - notes-block.lua

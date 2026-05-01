@@ -12,7 +12,8 @@ msc-thesis:
   supervisor: "Miriam Hurtado Bodell"
   examiner: "Examiner Name"
 
-format: liu-css-thesis-pdf
+format:
+  liu-css-thesis-pdf
 bibliography: references.bib
 ---
 # Introduction
@@ -65,6 +66,26 @@ in general.
 
 This chapter is called either \emph{Theory, Related Work}, or
 \emph{Related Research}. Check with your supervisor.
+
+
+$$
+\mathbf{E}_i
+=
+\boldsymbol{\alpha}
++ \boldsymbol{\beta}_1 \, \mathrm{Mid}_i
++ \boldsymbol{\beta}_2 \, \mathrm{Late}_i
++ \boldsymbol{\gamma} \, \mathrm{doc\_length\_bin}_i
++ \boldsymbol{\varepsilon}_i
+$$
+
+
+
+$$
+\mathbf{d}
+=
+\frac{\mathbf{c}_B - \mathbf{c}_A}
+{\sqrt{(\mathbf{c}_B - \mathbf{c}_A)^\top(\mathbf{c}_B - \mathbf{c}_A)}}
+$$
 
 ## The State of the Field
 
