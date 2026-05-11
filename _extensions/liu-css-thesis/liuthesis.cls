@@ -743,6 +743,7 @@
       }%
 \begin{minipage}[t]{\thesiswidth}
       {\fontsize{25pt}{30pt}\selectfont\swedishenglish{\@titleswedish}{\@titleenglish}\par}%
+      \vspace*{2mm}%
       \textemdash{} {\fontsize{13pt}{15pt}\selectfont\swedishenglish{\@subtitleswedish}{\@subtitleenglish}\par}%
       \vspace*{10mm}%
       {\@georgia\fontsize{12pt}{13pt}\selectfont\textbf{\@author}\par

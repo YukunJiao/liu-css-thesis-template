@@ -11,9 +11,18 @@ msc-thesis:
   subtitle-english: "Subtitle"
   supervisor: "Miriam Hurtado Bodell"
   examiner: "Examiner Name"
+  show-acknowledgments: false
 
 format:
   liu-css-thesis-pdf
+# mainfont: "Times New Roman"
+# link-citations: true
+header-includes:
+  - \usepackage{placeins}
+  - \usepackage{tikz}
+  - \usetikzlibrary{arrows.meta, shapes, positioning, fit, backgrounds, calc}
+  - \usepackage{chngcntr}
+  - \counterwithout{footnote}{chapter}
 bibliography: references.bib
 ---
 # Introduction
